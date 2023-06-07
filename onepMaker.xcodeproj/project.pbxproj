@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D6727F9CDA1FED101CCBB452 /* Pods_onepMaker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22F96C226E667FCCAB3A39B3 /* Pods_onepMaker.framework */; };
 		F64D71972A3057BA000DA808 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F64D71962A3057BA000DA808 /* AppDelegate.swift */; };
 		F64D71992A3057BA000DA808 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F64D71982A3057BA000DA808 /* SceneDelegate.swift */; };
 		F64D719B2A3057BA000DA808 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F64D719A2A3057BA000DA808 /* ViewController.swift */; };
@@ -16,6 +17,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		22F96C226E667FCCAB3A39B3 /* Pods_onepMaker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_onepMaker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3DA1BBF7E8F4FA157DBCA1B7 /* Pods-onepMaker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-onepMaker.debug.xcconfig"; path = "Target Support Files/Pods-onepMaker/Pods-onepMaker.debug.xcconfig"; sourceTree = "<group>"; };
+		B269C9A1AF599E730E8D92D7 /* Pods-onepMaker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-onepMaker.release.xcconfig"; path = "Target Support Files/Pods-onepMaker/Pods-onepMaker.release.xcconfig"; sourceTree = "<group>"; };
 		F64D71932A3057BA000DA808 /* onepMaker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = onepMaker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F64D71962A3057BA000DA808 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F64D71982A3057BA000DA808 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -31,17 +35,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D6727F9CDA1FED101CCBB452 /* Pods_onepMaker.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		326EC9D811A98542625B5C32 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				22F96C226E667FCCAB3A39B3 /* Pods_onepMaker.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9D819B0BBB3F1C0D1D87EE25 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3DA1BBF7E8F4FA157DBCA1B7 /* Pods-onepMaker.debug.xcconfig */,
+				B269C9A1AF599E730E8D92D7 /* Pods-onepMaker.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		F64D718A2A3057BA000DA808 = {
 			isa = PBXGroup;
 			children = (
 				F64D71952A3057BA000DA808 /* onepMaker */,
 				F64D71942A3057BA000DA808 /* Products */,
+				9D819B0BBB3F1C0D1D87EE25 /* Pods */,
+				326EC9D811A98542625B5C32 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -74,9 +99,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F64D71A72A3057BE000DA808 /* Build configuration list for PBXNativeTarget "onepMaker" */;
 			buildPhases = (
+				BCE57A73A3A9C7F21CE773EF /* [CP] Check Pods Manifest.lock */,
 				F64D718F2A3057BA000DA808 /* Sources */,
 				F64D71902A3057BA000DA808 /* Frameworks */,
 				F64D71912A3057BA000DA808 /* Resources */,
+				1D9F6427A0F356DA3C7B9B19 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -132,6 +159,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1D9F6427A0F356DA3C7B9B19 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-onepMaker/Pods-onepMaker-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-onepMaker/Pods-onepMaker-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-onepMaker/Pods-onepMaker-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BCE57A73A3A9C7F21CE773EF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-onepMaker-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		F64D718F2A3057BA000DA808 /* Sources */ = {
@@ -282,6 +351,7 @@
 		};
 		F64D71A82A3057BE000DA808 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3DA1BBF7E8F4FA157DBCA1B7 /* Pods-onepMaker.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -301,14 +371,18 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.chihiro.onepMaker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		F64D71A92A3057BE000DA808 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B269C9A1AF599E730E8D92D7 /* Pods-onepMaker.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -328,9 +402,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.chihiro.onepMaker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
