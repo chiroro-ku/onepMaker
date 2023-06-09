@@ -9,9 +9,14 @@ import UIKit
 
 class LeadCardViewController: UIViewController {
 
+    @IBOutlet weak var imageView: UIImageView!
+    
+    var leadCard = String()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        self.imageView.image = UIImage(named: leadCard)
     }
 
 }
