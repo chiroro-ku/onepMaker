@@ -16,6 +16,8 @@
 		F64D71A32A3057BE000DA808 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F64D71A12A3057BE000DA808 /* LaunchScreen.storyboard */; };
 		F6527D472A31E52A003966AD /* LeadCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6527D462A31E52A003966AD /* LeadCardViewController.swift */; };
 		F6527D492A324259003966AD /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6527D482A324259003966AD /* Button.swift */; };
+		F6527D4D2A333019003966AD /* CharacterCardListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6527D4C2A333019003966AD /* CharacterCardListViewController.swift */; };
+		F6527D512A339138003966AD /* LeadCardList.json in Resources */ = {isa = PBXBuildFile; fileRef = F6527D502A339138003966AD /* LeadCardList.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,8 @@
 		F64D71A42A3057BE000DA808 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F6527D462A31E52A003966AD /* LeadCardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeadCardViewController.swift; sourceTree = "<group>"; };
 		F6527D482A324259003966AD /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
+		F6527D4C2A333019003966AD /* CharacterCardListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterCardListViewController.swift; sourceTree = "<group>"; };
+		F6527D502A339138003966AD /* LeadCardList.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = LeadCardList.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +88,7 @@
 		F64D71952A3057BA000DA808 /* onepMaker */ = {
 			isa = PBXGroup;
 			children = (
+				F6527D502A339138003966AD /* LeadCardList.json */,
 				F64D71962A3057BA000DA808 /* AppDelegate.swift */,
 				F64D71982A3057BA000DA808 /* SceneDelegate.swift */,
 				F64D719A2A3057BA000DA808 /* ViewController.swift */,
@@ -93,6 +98,7 @@
 				F64D71A42A3057BE000DA808 /* Info.plist */,
 				F6527D462A31E52A003966AD /* LeadCardViewController.swift */,
 				F6527D482A324259003966AD /* Button.swift */,
+				F6527D4C2A333019003966AD /* CharacterCardListViewController.swift */,
 			);
 			path = onepMaker;
 			sourceTree = "<group>";
@@ -108,7 +114,6 @@
 				F64D718F2A3057BA000DA808 /* Sources */,
 				F64D71902A3057BA000DA808 /* Frameworks */,
 				F64D71912A3057BA000DA808 /* Resources */,
-				1D9F6427A0F356DA3C7B9B19 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -158,6 +163,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F64D71A32A3057BE000DA808 /* LaunchScreen.storyboard in Resources */,
+				F6527D512A339138003966AD /* LeadCardList.json in Resources */,
 				F64D71A02A3057BE000DA808 /* Assets.xcassets in Resources */,
 				F64D719E2A3057BB000DA808 /* Main.storyboard in Resources */,
 			);
@@ -166,23 +172,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		1D9F6427A0F356DA3C7B9B19 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-onepMaker/Pods-onepMaker-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-onepMaker/Pods-onepMaker-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-onepMaker/Pods-onepMaker-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		BCE57A73A3A9C7F21CE773EF /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -214,6 +203,7 @@
 			files = (
 				F6527D492A324259003966AD /* Button.swift in Sources */,
 				F64D719B2A3057BA000DA808 /* ViewController.swift in Sources */,
+				F6527D4D2A333019003966AD /* CharacterCardListViewController.swift in Sources */,
 				F64D71972A3057BA000DA808 /* AppDelegate.swift in Sources */,
 				F6527D472A31E52A003966AD /* LeadCardViewController.swift in Sources */,
 				F64D71992A3057BA000DA808 /* SceneDelegate.swift in Sources */,

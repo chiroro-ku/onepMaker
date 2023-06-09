@@ -92,6 +92,9 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="リーダーを設定"/>
+                                <connections>
+                                    <action selector="buttonTapped:" destination="InO-4V-GXC" eventType="touchUpInside" id="nJ7-v1-uV2"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Nm2-Ca-wcV"/>
@@ -109,17 +112,17 @@
                     <navigationItem key="navigationItem" title="リーダー" id="bbD-0J-y2l"/>
                     <connections>
                         <outlet property="imageView" destination="v7h-9f-P6s" id="tgV-2k-eaS"/>
-                        <segue destination="RHg-e5-cpf" kind="show" id="tYL-zS-dkt"/>
+                        <segue destination="RHg-e5-cpf" kind="show" identifier="toCardListViewController" id="tYL-zS-dkt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ysg-2x-mEq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1663.7681159420292" y="-2.6785714285714284"/>
         </scene>
-        <!--キャラクター-->
+        <!--一覧-->
         <scene sceneID="Y03-mh-rhu">
             <objects>
-                <viewController id="RHg-e5-cpf" sceneMemberID="viewController">
+                <viewController id="RHg-e5-cpf" customClass="CharacterCardListViewController" customModule="onepMaker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hSI-Zy-XVA">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -134,7 +137,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="R5c-dU-sb0">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cardCell" id="R5c-dU-sb0">
                                         <rect key="frame" x="0.0" y="0.0" width="97" height="130"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Jjg-ea-2lt">
@@ -161,7 +164,10 @@
                             <constraint firstItem="xQy-HB-EeI" firstAttribute="trailing" secondItem="b52-bx-kRD" secondAttribute="trailing" constant="20" id="gnk-Np-Rwd"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="キャラクター" id="h5Z-JB-8sG"/>
+                    <navigationItem key="navigationItem" title="一覧" id="h5Z-JB-8sG"/>
+                    <connections>
+                        <outlet property="cardCollectionView" destination="b52-bx-kRD" id="upY-AI-PjV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mDD-YP-Wam" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

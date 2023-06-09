@@ -18,5 +18,14 @@ class LeadCardViewController: UIViewController {
         
         self.imageView.image = UIImage(named: leadCard)
     }
-
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toCardListViewController" {
+            
+        }
+    }
+    
+    @IBAction func buttonTapped(_ sender: Any) {
+        performSegue(withIdentifier: "toCardListViewController", sender: nil)
+    }
 }
