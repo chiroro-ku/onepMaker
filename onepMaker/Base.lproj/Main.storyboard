@@ -166,11 +166,11 @@
                     </view>
                     <navigationItem key="navigationItem" title="一覧" id="h5Z-JB-8sG">
                         <barButtonItem key="rightBarButtonItem" style="done" id="01N-jp-fDx">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="bcY-O5-QOR">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="bcY-O5-QOR">
                                 <rect key="frame" x="302" y="5" width="92" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" image="square.3.layers.3d" catalog="system"/>
+                                <state key="normal" image="list.bullet" catalog="system"/>
                                 <connections>
                                     <segue destination="hov-2e-dNO" kind="show" identifier="toDeckViewController" id="WGM-91-s9M"/>
                                 </connections>
@@ -316,7 +316,7 @@
     <resources>
         <image name="OP01-001_p1" width="600" height="838"/>
         <image name="OP01-004" width="600" height="838"/>
-        <image name="square.3.layers.3d" catalog="system" width="128" height="125"/>
+        <image name="list.bullet" catalog="system" width="128" height="87"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
