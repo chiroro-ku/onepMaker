@@ -13,14 +13,14 @@
         <!--一覧-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="onepMaker" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="LeadCardsViewController" customModule="onepMaker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="X2i-wy-jUa">
-                                <rect key="frame" x="20" y="102" width="374" height="794"/>
-                                <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                <rect key="frame" x="20" y="92" width="374" height="804"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="EIl-9x-LNX">
                                     <size key="itemSize" width="120" height="169"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -50,7 +50,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemGray6Color"/>
                         <constraints>
-                            <constraint firstItem="X2i-wy-jUa" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="D8P-YB-VDF"/>
+                            <constraint firstItem="X2i-wy-jUa" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="D8P-YB-VDF"/>
                             <constraint firstItem="X2i-wy-jUa" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Nkx-td-OGS"/>
                             <constraint firstAttribute="bottom" secondItem="X2i-wy-jUa" secondAttribute="bottom" id="Uh7-2l-mgO"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="X2i-wy-jUa" secondAttribute="trailing" constant="20" id="cMm-vB-F9K"/>
@@ -111,8 +111,8 @@
                     </view>
                     <navigationItem key="navigationItem" title="リーダー" id="bbD-0J-y2l"/>
                     <connections>
-                        <outlet property="imageView" destination="v7h-9f-P6s" id="tgV-2k-eaS"/>
-                        <segue destination="RHg-e5-cpf" kind="show" identifier="toCardListViewController" id="tYL-zS-dkt"/>
+                        <outlet property="cardImageView" destination="v7h-9f-P6s" id="tgV-2k-eaS"/>
+                        <segue destination="RHg-e5-cpf" kind="show" identifier="toCharacterCardsViewController" id="tYL-zS-dkt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ysg-2x-mEq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -122,15 +122,15 @@
         <!--一覧-->
         <scene sceneID="Y03-mh-rhu">
             <objects>
-                <viewController id="RHg-e5-cpf" customClass="CharacterCardListViewController" customModule="onepMaker" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="RHg-e5-cpf" customClass="CharacterCardsViewController" customModule="onepMaker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hSI-Zy-XVA">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="b52-bx-kRD">
-                                <rect key="frame" x="20" y="102" width="374" height="760"/>
+                                <rect key="frame" x="20" y="92" width="374" height="804"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Rr5-Wz-w6R">
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="Rr5-Wz-w6R">
                                     <size key="itemSize" width="164" height="223"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -144,7 +144,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="97" height="130"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="OP01-004" translatesAutoresizingMaskIntoConstraints="NO" id="dT6-yF-hy7">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="OP01-004" translatesAutoresizingMaskIntoConstraints="NO" id="dT6-yF-hy7">
                                                     <rect key="frame" x="0.0" y="0.0" width="97" height="130"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                 </imageView>
@@ -158,20 +158,138 @@
                         <viewLayoutGuide key="safeArea" id="xQy-HB-EeI"/>
                         <color key="backgroundColor" systemColor="systemGray6Color"/>
                         <constraints>
-                            <constraint firstItem="b52-bx-kRD" firstAttribute="top" secondItem="xQy-HB-EeI" secondAttribute="top" constant="10" id="APP-3c-GQQ"/>
+                            <constraint firstItem="b52-bx-kRD" firstAttribute="top" secondItem="xQy-HB-EeI" secondAttribute="top" id="APP-3c-GQQ"/>
                             <constraint firstItem="b52-bx-kRD" firstAttribute="leading" secondItem="xQy-HB-EeI" secondAttribute="leading" constant="20" id="JR2-ay-lAL"/>
-                            <constraint firstAttribute="bottom" secondItem="b52-bx-kRD" secondAttribute="bottom" constant="34" id="Pd4-K3-Nnr"/>
+                            <constraint firstAttribute="bottom" secondItem="b52-bx-kRD" secondAttribute="bottom" id="Pd4-K3-Nnr"/>
                             <constraint firstItem="xQy-HB-EeI" firstAttribute="trailing" secondItem="b52-bx-kRD" secondAttribute="trailing" constant="20" id="gnk-Np-Rwd"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="一覧" id="h5Z-JB-8sG"/>
+                    <navigationItem key="navigationItem" title="一覧" id="h5Z-JB-8sG">
+                        <barButtonItem key="rightBarButtonItem" style="done" id="01N-jp-fDx">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="bcY-O5-QOR">
+                                <rect key="frame" x="302" y="5" width="92" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" image="square.3.layers.3d" catalog="system"/>
+                                <connections>
+                                    <segue destination="hov-2e-dNO" kind="show" identifier="toDeckViewController" id="WGM-91-s9M"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="cardCollectionView" destination="b52-bx-kRD" id="upY-AI-PjV"/>
+                        <segue destination="nrp-Gt-QTM" kind="show" identifier="toCharacterCardViewController" id="tZT-OB-VVS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mDD-YP-Wam" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2357.971014492754" y="-3.3482142857142856"/>
+        </scene>
+        <!--キャラクター-->
+        <scene sceneID="4cW-Di-27g">
+            <objects>
+                <viewController id="nrp-Gt-QTM" customClass="CharacterCardViewController" customModule="onepMaker" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6vI-DB-6PY">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QcO-H1-chD">
+                                <rect key="frame" x="20" y="102" width="374" height="501"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="OP01-004" translatesAutoresizingMaskIntoConstraints="NO" id="2kg-R3-EW9">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="501"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="QcO-H1-chD" secondAttribute="height" multiplier="374:501" id="06N-WL-xu3"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YTC-Yy-vsk" customClass="Button" customModule="onepMaker" customModuleProvider="target">
+                                <rect key="frame" x="20" y="827" width="374" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="デッキを確認"/>
+                                <connections>
+                                    <segue destination="hov-2e-dNO" kind="show" identifier="toDeckViewController" id="KOv-Sy-L6z"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ong-hf-JXz"/>
+                        <color key="backgroundColor" systemColor="systemGray6Color"/>
+                        <constraints>
+                            <constraint firstItem="YTC-Yy-vsk" firstAttribute="leading" secondItem="ong-hf-JXz" secondAttribute="leading" constant="20" id="6ht-aT-k5n"/>
+                            <constraint firstItem="YTC-Yy-vsk" firstAttribute="bottom" secondItem="ong-hf-JXz" secondAttribute="bottom" id="8H1-XX-qfO"/>
+                            <constraint firstItem="QcO-H1-chD" firstAttribute="leading" secondItem="ong-hf-JXz" secondAttribute="leading" constant="20" id="K0h-Hd-f6v"/>
+                            <constraint firstItem="ong-hf-JXz" firstAttribute="trailing" secondItem="QcO-H1-chD" secondAttribute="trailing" constant="20" id="SWf-lr-2OZ"/>
+                            <constraint firstItem="QcO-H1-chD" firstAttribute="top" secondItem="ong-hf-JXz" secondAttribute="top" constant="10" id="VI2-4V-Gd3"/>
+                            <constraint firstItem="QcO-H1-chD" firstAttribute="centerX" secondItem="6vI-DB-6PY" secondAttribute="centerX" id="qCj-l9-4G0"/>
+                            <constraint firstItem="ong-hf-JXz" firstAttribute="trailing" secondItem="YTC-Yy-vsk" secondAttribute="trailing" constant="20" id="xzU-pn-z1I"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="キャラクター" id="Jou-dD-qIh"/>
+                    <connections>
+                        <outlet property="cardImageView" destination="2kg-R3-EW9" id="orF-NM-6af"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SHk-1Q-5mu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2358" y="743"/>
+        </scene>
+        <!--デッキ-->
+        <scene sceneID="N2I-r8-gA6">
+            <objects>
+                <viewController id="hov-2e-dNO" customClass="DeckViewController" customModule="onepMaker" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gdD-X8-mS7">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="bS7-Xi-Qto">
+                                <rect key="frame" x="20" y="92" width="374" height="804"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="WJh-dY-EF8">
+                                    <size key="itemSize" width="160" height="178"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cardCell" id="pkj-tL-c6R">
+                                        <rect key="frame" x="0.0" y="0.0" width="97" height="130"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="T2z-G4-v1O">
+                                            <rect key="frame" x="0.0" y="0.0" width="97" height="130"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="OP01-004" translatesAutoresizingMaskIntoConstraints="NO" id="hQ6-GP-def">
+                                                    <rect key="frame" x="0.0" y="1" width="97" height="129"/>
+                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                </imageView>
+                                            </subviews>
+                                        </collectionViewCellContentView>
+                                        <size key="customSize" width="97" height="130"/>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="NxQ-tq-T3r"/>
+                        <color key="backgroundColor" systemColor="systemGray6Color"/>
+                        <constraints>
+                            <constraint firstItem="bS7-Xi-Qto" firstAttribute="leading" secondItem="NxQ-tq-T3r" secondAttribute="leading" constant="20" id="Rev-Hk-IRa"/>
+                            <constraint firstAttribute="bottom" secondItem="bS7-Xi-Qto" secondAttribute="bottom" id="j6H-9a-6lB"/>
+                            <constraint firstItem="bS7-Xi-Qto" firstAttribute="top" secondItem="NxQ-tq-T3r" secondAttribute="top" id="kLD-Yf-vQD"/>
+                            <constraint firstItem="NxQ-tq-T3r" firstAttribute="trailing" secondItem="bS7-Xi-Qto" secondAttribute="trailing" constant="20" id="vm3-JA-ouO"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="デッキ" id="Wo5-g9-Emy"/>
+                    <connections>
+                        <outlet property="cardCollectionView" destination="bS7-Xi-Qto" id="Hf1-5f-KyZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bAf-0m-5Nq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3420" y="-3"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="DDt-dU-VtV">
@@ -192,9 +310,13 @@
             <point key="canvasLocation" x="56.521739130434788" y="-2.6785714285714284"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="WGM-91-s9M"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="OP01-001_p1" width="600" height="838"/>
         <image name="OP01-004" width="600" height="838"/>
+        <image name="square.3.layers.3d" catalog="system" width="128" height="125"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

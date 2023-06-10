@@ -9,23 +9,23 @@ import UIKit
 
 class LeadCardViewController: UIViewController {
 
-    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var cardImageView: UIImageView!
     
     var leadCard = String()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.imageView.image = UIImage(named: leadCard)
+        self.cardImageView.image = UIImage(named: leadCard)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "toCardListViewController" {
+        if segue.identifier == "toCharacterCardsViewController" {
             
         }
     }
     
     @IBAction func buttonTapped(_ sender: Any) {
-        performSegue(withIdentifier: "toCardListViewController", sender: nil)
+        performSegue(withIdentifier: "toCharacterCardsViewController", sender: nil)
     }
 }

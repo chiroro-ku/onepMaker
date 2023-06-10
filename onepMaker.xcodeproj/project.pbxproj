@@ -7,17 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D6727F9CDA1FED101CCBB452 /* Pods_onepMaker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22F96C226E667FCCAB3A39B3 /* Pods_onepMaker.framework */; };
 		F64D71972A3057BA000DA808 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F64D71962A3057BA000DA808 /* AppDelegate.swift */; };
 		F64D71992A3057BA000DA808 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F64D71982A3057BA000DA808 /* SceneDelegate.swift */; };
-		F64D719B2A3057BA000DA808 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F64D719A2A3057BA000DA808 /* ViewController.swift */; };
+		F64D719B2A3057BA000DA808 /* LeadCardsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F64D719A2A3057BA000DA808 /* LeadCardsViewController.swift */; };
 		F64D719E2A3057BB000DA808 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F64D719C2A3057BB000DA808 /* Main.storyboard */; };
 		F64D71A02A3057BE000DA808 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F64D719F2A3057BE000DA808 /* Assets.xcassets */; };
 		F64D71A32A3057BE000DA808 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F64D71A12A3057BE000DA808 /* LaunchScreen.storyboard */; };
 		F6527D472A31E52A003966AD /* LeadCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6527D462A31E52A003966AD /* LeadCardViewController.swift */; };
 		F6527D492A324259003966AD /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6527D482A324259003966AD /* Button.swift */; };
-		F6527D4D2A333019003966AD /* CharacterCardListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6527D4C2A333019003966AD /* CharacterCardListViewController.swift */; };
+		F6527D4D2A333019003966AD /* CharacterCardsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6527D4C2A333019003966AD /* CharacterCardsViewController.swift */; };
 		F6527D512A339138003966AD /* LeadCardList.json in Resources */ = {isa = PBXBuildFile; fileRef = F6527D502A339138003966AD /* LeadCardList.json */; };
+		F6527D532A3392C5003966AD /* CharacterCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6527D522A3392C5003966AD /* CharacterCardViewController.swift */; };
+		F66ACD072A339DD90038184A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F66ACD062A339DD90038184A /* ViewController.swift */; };
+		F66ACD092A3486470038184A /* DeckViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F66ACD082A3486470038184A /* DeckViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,15 +29,18 @@
 		F64D71932A3057BA000DA808 /* onepMaker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = onepMaker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F64D71962A3057BA000DA808 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F64D71982A3057BA000DA808 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		F64D719A2A3057BA000DA808 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F64D719A2A3057BA000DA808 /* LeadCardsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeadCardsViewController.swift; sourceTree = "<group>"; };
 		F64D719D2A3057BB000DA808 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F64D719F2A3057BE000DA808 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F64D71A22A3057BE000DA808 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F64D71A42A3057BE000DA808 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F6527D462A31E52A003966AD /* LeadCardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeadCardViewController.swift; sourceTree = "<group>"; };
 		F6527D482A324259003966AD /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
-		F6527D4C2A333019003966AD /* CharacterCardListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterCardListViewController.swift; sourceTree = "<group>"; };
+		F6527D4C2A333019003966AD /* CharacterCardsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterCardsViewController.swift; sourceTree = "<group>"; };
 		F6527D502A339138003966AD /* LeadCardList.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = LeadCardList.json; sourceTree = "<group>"; };
+		F6527D522A3392C5003966AD /* CharacterCardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterCardViewController.swift; sourceTree = "<group>"; };
+		F66ACD062A339DD90038184A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F66ACD082A3486470038184A /* DeckViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeckViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,7 +48,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D6727F9CDA1FED101CCBB452 /* Pods_onepMaker.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -91,14 +95,17 @@
 				F6527D502A339138003966AD /* LeadCardList.json */,
 				F64D71962A3057BA000DA808 /* AppDelegate.swift */,
 				F64D71982A3057BA000DA808 /* SceneDelegate.swift */,
-				F64D719A2A3057BA000DA808 /* ViewController.swift */,
+				F66ACD062A339DD90038184A /* ViewController.swift */,
+				F6527D482A324259003966AD /* Button.swift */,
 				F64D719C2A3057BB000DA808 /* Main.storyboard */,
 				F64D719F2A3057BE000DA808 /* Assets.xcassets */,
 				F64D71A12A3057BE000DA808 /* LaunchScreen.storyboard */,
 				F64D71A42A3057BE000DA808 /* Info.plist */,
+				F64D719A2A3057BA000DA808 /* LeadCardsViewController.swift */,
 				F6527D462A31E52A003966AD /* LeadCardViewController.swift */,
-				F6527D482A324259003966AD /* Button.swift */,
-				F6527D4C2A333019003966AD /* CharacterCardListViewController.swift */,
+				F6527D4C2A333019003966AD /* CharacterCardsViewController.swift */,
+				F6527D522A3392C5003966AD /* CharacterCardViewController.swift */,
+				F66ACD082A3486470038184A /* DeckViewController.swift */,
 			);
 			path = onepMaker;
 			sourceTree = "<group>";
@@ -202,11 +209,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				F6527D492A324259003966AD /* Button.swift in Sources */,
-				F64D719B2A3057BA000DA808 /* ViewController.swift in Sources */,
-				F6527D4D2A333019003966AD /* CharacterCardListViewController.swift in Sources */,
+				F64D719B2A3057BA000DA808 /* LeadCardsViewController.swift in Sources */,
+				F6527D4D2A333019003966AD /* CharacterCardsViewController.swift in Sources */,
 				F64D71972A3057BA000DA808 /* AppDelegate.swift in Sources */,
 				F6527D472A31E52A003966AD /* LeadCardViewController.swift in Sources */,
+				F6527D532A3392C5003966AD /* CharacterCardViewController.swift in Sources */,
+				F66ACD072A339DD90038184A /* ViewController.swift in Sources */,
 				F64D71992A3057BA000DA808 /* SceneDelegate.swift in Sources */,
+				F66ACD092A3486470038184A /* DeckViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
