@@ -21,6 +21,7 @@
 		F6527D532A3392C5003966AD /* CharacterCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6527D522A3392C5003966AD /* CharacterCardViewController.swift */; };
 		F66ACD072A339DD90038184A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F66ACD062A339DD90038184A /* ViewController.swift */; };
 		F66ACD092A3486470038184A /* DeckViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F66ACD082A3486470038184A /* DeckViewController.swift */; };
+		F66ACD0B2A3507900038184A /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = F66ACD0A2A3507900038184A /* Model.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		F6527D522A3392C5003966AD /* CharacterCardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterCardViewController.swift; sourceTree = "<group>"; };
 		F66ACD062A339DD90038184A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		F66ACD082A3486470038184A /* DeckViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeckViewController.swift; sourceTree = "<group>"; };
+		F66ACD0A2A3507900038184A /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +110,7 @@
 				F6527D4C2A333019003966AD /* CharacterCardsViewController.swift */,
 				F6527D522A3392C5003966AD /* CharacterCardViewController.swift */,
 				F66ACD082A3486470038184A /* DeckViewController.swift */,
+				F66ACD0A2A3507900038184A /* Model.swift */,
 			);
 			path = onepMaker;
 			sourceTree = "<group>";
@@ -184,6 +187,7 @@
 /* Begin PBXShellScriptBuildPhase section */
 		1E41189BCD13E6F3D59A607C /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
 			buildActionMask = 2147483647;
 			files = (
 			);
@@ -233,6 +237,7 @@
 				F6527D4D2A333019003966AD /* CharacterCardsViewController.swift in Sources */,
 				F64D71972A3057BA000DA808 /* AppDelegate.swift in Sources */,
 				F6527D472A31E52A003966AD /* LeadCardViewController.swift in Sources */,
+				F66ACD0B2A3507900038184A /* Model.swift in Sources */,
 				F6527D532A3392C5003966AD /* CharacterCardViewController.swift in Sources */,
 				F66ACD072A339DD90038184A /* ViewController.swift in Sources */,
 				F64D71992A3057BA000DA808 /* SceneDelegate.swift in Sources */,
