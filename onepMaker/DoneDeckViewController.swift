@@ -67,8 +67,6 @@ extension DoneDeckViewController: UICollectionViewDataSource, UICollectionViewDe
         
         let cellSize = CGSize(width: width, height: height)
         
-        print(cellSize)
-        
         return cellSize
     }
 }
