@@ -7,21 +7,23 @@
 
 import UIKit
 
-class LeadCardViewController: UIViewController {
+class LeaderCardViewController: UIViewController {
 
     @IBOutlet weak var cardImageView: UIImageView!
     
-    var leadCard = String()
+    var leadCard = Card()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.cardImageView.image = UIImage(named: leadCard)
+        let id = self.leadCard.id
+        self.cardImageView.image = UIImage(named: id)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "toCharacterCardsViewController" {
-            
+            let characterCardsViewController = segue.destination as! CharacterCardsViewController
+            characterCardsViewController.leaderCard = self.leadCard
         }
     }
     

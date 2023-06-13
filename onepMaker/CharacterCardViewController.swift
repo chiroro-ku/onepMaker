@@ -10,12 +10,29 @@ import UIKit
 class CharacterCardViewController: UIViewController {
     
     @IBOutlet weak var cardImageView: UIImageView!
+    @IBOutlet weak var numberLabel: UILabel!
     
-    var characterCard = String()
+    var characterCard = Card()
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.cardImageView.image = UIImage(named: characterCard)
+        let id = self.characterCard.id
+        self.cardImageView.image = UIImage(named: id)
+        
+        self.numberLoad()
+    }
+    
+    func numberLoad(){
+        let model = Model()
+        let id = self.characterCard.id
+        self.numberLabel.text = "\(model.deckCardNumber(id: id))"
+    }
+    
+    @IBAction func addCardButtonTapped(_ sender: Any) {
+        let model = Model()
+        model.addDeckCard(card: characterCard)
+        
+        self.numberLoad()
     }
 }
