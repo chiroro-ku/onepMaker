@@ -31,7 +31,14 @@ class CharacterCardViewController: UIViewController {
     
     @IBAction func addCardButtonTapped(_ sender: Any) {
         let model = Model()
-        model.addDeckCard(card: characterCard)
+        model.addDeckCard(card: self.characterCard)
+        
+        self.numberLoad()
+    }
+    
+    @IBAction func deleteCardButtonTapped(_ sender: Any) {
+        let model = Model()
+        model.deleteDeckCard(card: self.characterCard)
         
         self.numberLoad()
     }

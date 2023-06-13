@@ -54,12 +54,54 @@ class Model{
         
     }
     
-    func deleteDeckCard()
+    func deleteDeckCard(card: Card) {
+        
+        let realm = try! Realm()
+        
+        let number = realm.objects(DeckCard.self).filter("card.id == '\(card.id)'").count
+        let deckCard = realm.objects(DeckCard.self).filter("card.id == '\(card.id)'").filter("number == \(number)")
+        
+        try! realm.write{
+            realm.delete(deckCard)
+        }
+        
+    }
+    
+    func deleteDeckCardAll(){
+        
+        let realm = try! Realm()
+        let result = realm.objects(DeckCard.self)
+        try! realm.write {
+            realm.delete(result)
+        }
+        
+    }
     
     func deckCardNumber(id: String) -> Int{
         
         let realm = try! Realm()
         let number = realm.objects(DeckCard.self).filter("card.id == '\(id)'").count
+        
+        return number
+    }
+    
+    func deckCardAll(leader: Bool = false) -> Results<DeckCard>{
+        
+        var infoMacro = "card.info != 'LEADER'"
+        
+        if leader {
+            infoMacro = "card.info != '-'"
+        }
+        
+        let realm = try! Realm()
+        let result = realm.objects(DeckCard.self).filter(infoMacro)
+        
+        return result
+    }
+    
+    func deckCardNumber() -> Int{
+        let realm = try! Realm()
+        let number = realm.objects(DeckCard.self).filter("card.info != 'LEADER'").count
         
         return number
     }

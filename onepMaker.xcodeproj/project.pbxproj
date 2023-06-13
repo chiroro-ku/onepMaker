@@ -19,12 +19,14 @@
 		F6527D4D2A333019003966AD /* CharacterCardsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6527D4C2A333019003966AD /* CharacterCardsViewController.swift */; };
 		F6527D532A3392C5003966AD /* CharacterCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6527D522A3392C5003966AD /* CharacterCardViewController.swift */; };
 		F665E86C2A382ED100651428 /* DeckCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = F665E86B2A382ED100651428 /* DeckCard.swift */; };
+		F665E86E2A384AB500651428 /* DeckCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F665E86D2A384AB500651428 /* DeckCardViewController.swift */; };
+		F665E8702A38578600651428 /* DoneDeckViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F665E86F2A38578600651428 /* DoneDeckViewController.swift */; };
+		F665E8722A385BFE00651428 /* CardList.csv in Resources */ = {isa = PBXBuildFile; fileRef = F665E8712A385BFE00651428 /* CardList.csv */; };
 		F66ACD072A339DD90038184A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F66ACD062A339DD90038184A /* ViewController.swift */; };
 		F66ACD092A3486470038184A /* DeckViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F66ACD082A3486470038184A /* DeckViewController.swift */; };
 		F66ACD0B2A3507900038184A /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = F66ACD0A2A3507900038184A /* Model.swift */; };
 		F66ACD0D2A350A130038184A /* CardList.json in Resources */ = {isa = PBXBuildFile; fileRef = F66ACD0C2A350A130038184A /* CardList.json */; };
 		F66ACD0F2A3641EB0038184A /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = F66ACD0E2A3641EB0038184A /* Card.swift */; };
-		F66ACD112A36C3160038184A /* CardList.csv in Resources */ = {isa = PBXBuildFile; fileRef = F66ACD102A36C3150038184A /* CardList.csv */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,12 +46,14 @@
 		F6527D4C2A333019003966AD /* CharacterCardsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterCardsViewController.swift; sourceTree = "<group>"; };
 		F6527D522A3392C5003966AD /* CharacterCardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterCardViewController.swift; sourceTree = "<group>"; };
 		F665E86B2A382ED100651428 /* DeckCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeckCard.swift; sourceTree = "<group>"; };
+		F665E86D2A384AB500651428 /* DeckCardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeckCardViewController.swift; sourceTree = "<group>"; };
+		F665E86F2A38578600651428 /* DoneDeckViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoneDeckViewController.swift; sourceTree = "<group>"; };
+		F665E8712A385BFE00651428 /* CardList.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CardList.csv; sourceTree = "<group>"; };
 		F66ACD062A339DD90038184A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		F66ACD082A3486470038184A /* DeckViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeckViewController.swift; sourceTree = "<group>"; };
 		F66ACD0A2A3507900038184A /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		F66ACD0C2A350A130038184A /* CardList.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = CardList.json; sourceTree = "<group>"; };
 		F66ACD0E2A3641EB0038184A /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
-		F66ACD102A36C3150038184A /* CardList.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CardList.csv; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,8 +106,8 @@
 		F64D71952A3057BA000DA808 /* onepMaker */ = {
 			isa = PBXGroup;
 			children = (
+				F665E8712A385BFE00651428 /* CardList.csv */,
 				F66ACD0C2A350A130038184A /* CardList.json */,
-				F66ACD102A36C3150038184A /* CardList.csv */,
 				F64D71962A3057BA000DA808 /* AppDelegate.swift */,
 				F64D71982A3057BA000DA808 /* SceneDelegate.swift */,
 				F66ACD062A339DD90038184A /* ViewController.swift */,
@@ -117,6 +121,8 @@
 				F6527D4C2A333019003966AD /* CharacterCardsViewController.swift */,
 				F6527D522A3392C5003966AD /* CharacterCardViewController.swift */,
 				F66ACD082A3486470038184A /* DeckViewController.swift */,
+				F665E86D2A384AB500651428 /* DeckCardViewController.swift */,
+				F665E86F2A38578600651428 /* DoneDeckViewController.swift */,
 				F66ACD0A2A3507900038184A /* Model.swift */,
 				F66ACD0E2A3641EB0038184A /* Card.swift */,
 				F665E86B2A382ED100651428 /* DeckCard.swift */,
@@ -186,7 +192,7 @@
 			files = (
 				F64D71A32A3057BE000DA808 /* LaunchScreen.storyboard in Resources */,
 				F64D71A02A3057BE000DA808 /* Assets.xcassets in Resources */,
-				F66ACD112A36C3160038184A /* CardList.csv in Resources */,
+				F665E8722A385BFE00651428 /* CardList.csv in Resources */,
 				F64D719E2A3057BB000DA808 /* Main.storyboard in Resources */,
 				F66ACD0D2A350A130038184A /* CardList.json in Resources */,
 			);
@@ -241,6 +247,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F665E86E2A384AB500651428 /* DeckCardViewController.swift in Sources */,
 				F6527D492A324259003966AD /* Button.swift in Sources */,
 				F64D719B2A3057BA000DA808 /* LeaderCardsViewController.swift in Sources */,
 				F665E86C2A382ED100651428 /* DeckCard.swift in Sources */,
@@ -252,6 +259,7 @@
 				F66ACD072A339DD90038184A /* ViewController.swift in Sources */,
 				F64D71992A3057BA000DA808 /* SceneDelegate.swift in Sources */,
 				F66ACD092A3486470038184A /* DeckViewController.swift in Sources */,
+				F665E8702A38578600651428 /* DoneDeckViewController.swift in Sources */,
 				F66ACD0F2A3641EB0038184A /* Card.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

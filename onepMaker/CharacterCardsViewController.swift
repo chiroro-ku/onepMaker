@@ -11,6 +11,7 @@ import RealmSwift
 class CharacterCardsViewController: UIViewController {
     
     @IBOutlet weak var cardCollectionView: UICollectionView!
+    @IBOutlet weak var deckButton: UIButton!
     
     var cardList: Results<Card>!
     var leaderCard = Card()
@@ -25,6 +26,8 @@ class CharacterCardsViewController: UIViewController {
         let model = Model()
         let color = self.leaderCard.color
         self.cardList = model.deckCardAll(leaderColor: color)
+        
+        self.deckNumberLoad()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -33,6 +36,18 @@ class CharacterCardsViewController: UIViewController {
             let characterCardViewController = segue.destination as? CharacterCardViewController
             characterCardViewController?.characterCard = self.selectedCard
         }
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.deckNumberLoad()
+    }
+    
+    func deckNumberLoad() {
+        
+        let model = Model()
+        let number = model.deckCardNumber()
+        
+        self.deckButton.setTitle( "デッキ(\(number))", for: .normal)
     }
 }
 

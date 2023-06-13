@@ -22,8 +22,14 @@ class LeaderCardViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "toCharacterCardsViewController" {
+            
             let characterCardsViewController = segue.destination as! CharacterCardsViewController
             characterCardsViewController.leaderCard = self.leadCard
+            
+            let model = Model()
+            model.deleteDeckCardAll()
+            model.addDeckCard(card: leadCard)
+            
         }
     }
     
