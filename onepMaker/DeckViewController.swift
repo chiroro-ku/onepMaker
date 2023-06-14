@@ -28,10 +28,12 @@ class DeckViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-        if segue.identifier == "toDeckCardViewController" {
+        if segue.identifier == "toCardViewController" {
             
-            let deckCardViewController = segue.destination as! DeckCardViewController
-            deckCardViewController.deckCard = self.selectedCard
+            let deckCardViewController = segue.destination as! CardViewController
+            if let card = self.selectedCard.card {
+                deckCardViewController.card = card
+            }
             
         }
         
@@ -87,6 +89,6 @@ extension DeckViewController: UICollectionViewDataSource, UICollectionViewDelega
         
         self.selectedCard = self.cardList[indexPath.row]
         
-        performSegue(withIdentifier: "toDeckCardViewController", sender: nil)
+        performSegue(withIdentifier: "toCardViewController", sender: nil)
     }
 }

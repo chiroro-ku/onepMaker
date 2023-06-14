@@ -32,9 +32,9 @@ class CharacterCardsViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-        if segue.identifier == "toCharacterCardViewController" {
-            let characterCardViewController = segue.destination as? CharacterCardViewController
-            characterCardViewController?.characterCard = self.selectedCard
+        if segue.identifier == "toCardViewController" {
+            let characterCardViewController = segue.destination as? CardViewController
+            characterCardViewController?.card = self.selectedCard
         }
     }
     
@@ -80,6 +80,6 @@ extension CharacterCardsViewController: UICollectionViewDataSource, UICollection
         
         self.selectedCard = self.cardList[indexPath.row]
         
-        performSegue(withIdentifier: "toCharacterCardViewController", sender: nil)
+        performSegue(withIdentifier: "toCardViewController", sender: nil)
     }
 }

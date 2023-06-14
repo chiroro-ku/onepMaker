@@ -87,23 +87,37 @@
                                     <constraint firstAttribute="width" secondItem="V3d-Ne-S1o" secondAttribute="height" multiplier="374:501" id="JgE-8G-uuA"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I2E-yo-U74" customClass="Button" customModule="onepMaker" customModuleProvider="target">
-                                <rect key="frame" x="20" y="827" width="374" height="35"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I2E-yo-U74" customClass="Button" customModule="onepMaker" customModuleProvider="target">
+                                <rect key="frame" x="20" y="797" width="374" height="45"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <state key="normal" title="Button"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="I2E-yo-U74" secondAttribute="height" multiplier="374:45" id="gHN-MS-n2I"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="リーダーを設定"/>
                                 <buttonConfiguration key="configuration" style="plain" title="リーダーを設定"/>
                                 <connections>
                                     <action selector="buttonTapped:" destination="InO-4V-GXC" eventType="touchUpInside" id="nJ7-v1-uV2"/>
                                 </connections>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chevron.forward" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Ezh-z2-F0W">
+                                <rect key="frame" x="342.5" y="806" width="31.5" height="28"/>
+                                <color key="tintColor" systemColor="systemGrayColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Ezh-z2-F0W" secondAttribute="height" multiplier="1:1" id="UYu-HM-zW8"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Nm2-Ca-wcV"/>
                         <color key="backgroundColor" systemColor="systemGray6Color"/>
                         <constraints>
+                            <constraint firstItem="Ezh-z2-F0W" firstAttribute="centerY" secondItem="I2E-yo-U74" secondAttribute="centerY" id="5sW-TO-jJU"/>
                             <constraint firstItem="V3d-Ne-S1o" firstAttribute="leading" secondItem="Nm2-Ca-wcV" secondAttribute="leading" constant="20" id="9Nf-8j-wDf"/>
-                            <constraint firstItem="Nm2-Ca-wcV" firstAttribute="bottom" secondItem="I2E-yo-U74" secondAttribute="bottom" id="Oqb-dy-ImQ"/>
+                            <constraint firstItem="Ezh-z2-F0W" firstAttribute="height" secondItem="I2E-yo-U74" secondAttribute="height" multiplier="0.7" id="GoB-7t-aKi"/>
                             <constraint firstItem="V3d-Ne-S1o" firstAttribute="top" secondItem="Nm2-Ca-wcV" secondAttribute="top" constant="10" id="WSp-zR-r4y"/>
                             <constraint firstItem="I2E-yo-U74" firstAttribute="leading" secondItem="Nm2-Ca-wcV" secondAttribute="leading" constant="20" id="Z1c-ho-p1m"/>
+                            <constraint firstItem="Nm2-Ca-wcV" firstAttribute="bottom" secondItem="I2E-yo-U74" secondAttribute="bottom" constant="20" id="amS-d8-Tz0"/>
+                            <constraint firstItem="I2E-yo-U74" firstAttribute="trailing" secondItem="Ezh-z2-F0W" secondAttribute="trailing" constant="20" id="cna-9t-z3e"/>
                             <constraint firstItem="V3d-Ne-S1o" firstAttribute="centerX" secondItem="E1O-hg-req" secondAttribute="centerX" id="hgF-Hb-aA5"/>
                             <constraint firstItem="Nm2-Ca-wcV" firstAttribute="trailing" secondItem="V3d-Ne-S1o" secondAttribute="trailing" constant="20" id="mhx-KB-SQa"/>
                             <constraint firstItem="Nm2-Ca-wcV" firstAttribute="trailing" secondItem="I2E-yo-U74" secondAttribute="trailing" constant="20" id="p97-AB-BI2"/>
@@ -117,7 +131,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ysg-2x-mEq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1663.7681159420292" y="-2.6785714285714284"/>
+            <point key="canvasLocation" x="1698.5507246376812" y="-3.3482142857142856"/>
         </scene>
         <!--一覧-->
         <scene sceneID="Y03-mh-rhu">
@@ -183,11 +197,12 @@
                         <outlet property="cardCollectionView" destination="b52-bx-kRD" id="upY-AI-PjV"/>
                         <outlet property="deckButton" destination="bcY-O5-QOR" id="is3-YP-a2P"/>
                         <segue destination="nrp-Gt-QTM" kind="show" identifier="toCharacterCardViewController" id="tZT-OB-VVS"/>
+                        <segue destination="IgG-ch-3Sd" kind="showDetail" identifier="toCardViewController" id="9Bc-5g-Y57"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mDD-YP-Wam" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2357.971014492754" y="-3.3482142857142856"/>
+            <point key="canvasLocation" x="2435" y="-3"/>
         </scene>
         <!--カード-->
         <scene sceneID="4cW-Di-27g">
@@ -263,7 +278,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SHk-1Q-5mu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2358" y="698"/>
+            <point key="canvasLocation" x="1275" y="887"/>
         </scene>
         <!--カード-->
         <scene sceneID="JOm-Kd-cHo">
@@ -340,7 +355,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RqG-c9-sEV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3167" y="698"/>
+            <point key="canvasLocation" x="4194" y="887"/>
         </scene>
         <!--デッキ-->
         <scene sceneID="N2I-r8-gA6">
@@ -406,6 +421,7 @@
                         <outlet property="cardCollectionView" destination="bS7-Xi-Qto" id="Hf1-5f-KyZ"/>
                         <outlet property="doneButton" destination="OEe-PU-MK7" id="GgT-Q2-xRD"/>
                         <segue destination="Qgc-7L-5ea" kind="show" identifier="toDeckCardViewController" id="kqt-IX-3MF"/>
+                        <segue destination="IgG-ch-3Sd" kind="showDetail" identifier="toCardViewController" id="nEO-ON-fdf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bAf-0m-5Nq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -499,10 +515,94 @@
             </objects>
             <point key="canvasLocation" x="56.521739130434788" y="-2.6785714285714284"/>
         </scene>
+        <!--Card View Controller-->
+        <scene sceneID="94d-Qy-XnF">
+            <objects>
+                <viewController id="IgG-ch-3Sd" customClass="CardViewController" customModule="onepMaker" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jf8-jR-qaz">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="886"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sPE-cR-CKt">
+                                <rect key="frame" x="20" y="20" width="374" height="501"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="OP01-004" translatesAutoresizingMaskIntoConstraints="NO" id="wCU-ai-dKb">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="501"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="sPE-cR-CKt" secondAttribute="height" multiplier="374:501" id="vQU-it-m41"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yak-Zp-Dka" customClass="Button" customModule="onepMaker" customModuleProvider="target">
+                                <rect key="frame" x="20" y="801" width="290" height="45"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="4枚をデッキに追加する"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="udg-8f-aHf" customClass="Button" customModule="onepMaker" customModuleProvider="target">
+                                <rect key="frame" x="318" y="770" width="76" height="76"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="udg-8f-aHf" secondAttribute="height" multiplier="1:1" id="muY-OZ-p2U"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" image="plus" catalog="system"/>
+                                <connections>
+                                    <action selector="addDeckCardButtonTapped:" destination="IgG-ch-3Sd" eventType="touchUpInside" id="Uth-dY-R0h"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jTm-OL-hZC" customClass="Button" customModule="onepMaker" customModuleProvider="target">
+                                <rect key="frame" x="318" y="685.5" width="76" height="76.5"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="tintColor" systemColor="systemRedColor"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" image="minus" catalog="system"/>
+                                <connections>
+                                    <action selector="deleteDeckCardButtonTapped:" destination="IgG-ch-3Sd" eventType="touchUpInside" id="4CE-n7-KDc"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="bbM-05-s7z"/>
+                        <color key="backgroundColor" systemColor="systemGray6Color"/>
+                        <constraints>
+                            <constraint firstItem="bbM-05-s7z" firstAttribute="trailing" secondItem="sPE-cR-CKt" secondAttribute="trailing" constant="20" id="2wG-nh-dHI"/>
+                            <constraint firstItem="udg-8f-aHf" firstAttribute="bottom" secondItem="Yak-Zp-Dka" secondAttribute="bottom" id="3SK-Z9-Zko"/>
+                            <constraint firstItem="Yak-Zp-Dka" firstAttribute="width" secondItem="jf8-jR-qaz" secondAttribute="width" multiplier="0.7" id="3ih-5u-CbZ"/>
+                            <constraint firstItem="udg-8f-aHf" firstAttribute="top" secondItem="jTm-OL-hZC" secondAttribute="bottom" constant="8" symbolic="YES" id="6Nc-t5-phi"/>
+                            <constraint firstItem="sPE-cR-CKt" firstAttribute="leading" secondItem="bbM-05-s7z" secondAttribute="leading" constant="20" id="SmY-OF-Bbo"/>
+                            <constraint firstItem="sPE-cR-CKt" firstAttribute="top" secondItem="bbM-05-s7z" secondAttribute="top" constant="20" id="aKl-s2-NmU"/>
+                            <constraint firstItem="udg-8f-aHf" firstAttribute="height" secondItem="Yak-Zp-Dka" secondAttribute="height" multiplier="1.7" id="dUL-r3-tDM"/>
+                            <constraint firstItem="udg-8f-aHf" firstAttribute="height" secondItem="jTm-OL-hZC" secondAttribute="height" id="eew-4K-BTG"/>
+                            <constraint firstItem="bbM-05-s7z" firstAttribute="trailing" secondItem="jTm-OL-hZC" secondAttribute="trailing" constant="20" id="mmm-ji-Wqt"/>
+                            <constraint firstItem="bbM-05-s7z" firstAttribute="bottom" secondItem="Yak-Zp-Dka" secondAttribute="bottom" constant="40" id="oeZ-Xc-B24"/>
+                            <constraint firstItem="bbM-05-s7z" firstAttribute="trailing" secondItem="udg-8f-aHf" secondAttribute="trailing" constant="20" id="qDc-lM-cuc"/>
+                            <constraint firstItem="udg-8f-aHf" firstAttribute="width" secondItem="jTm-OL-hZC" secondAttribute="width" id="rRR-4V-GKR"/>
+                            <constraint firstItem="udg-8f-aHf" firstAttribute="leading" secondItem="Yak-Zp-Dka" secondAttribute="trailing" constant="8" symbolic="YES" id="sRa-oh-XEu"/>
+                            <constraint firstItem="Yak-Zp-Dka" firstAttribute="leading" secondItem="bbM-05-s7z" secondAttribute="leading" constant="20" id="vwI-mf-HRG"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="MUY-wE-cwH"/>
+                    <connections>
+                        <outlet property="cardImageView" destination="wCU-ai-dKb" id="XoW-bM-XV4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="37A-GT-S4j" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2757.971014492754" y="902.67857142857133"/>
+        </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="nEO-ON-fdf"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="OP01-001" width="600" height="838"/>
         <image name="OP01-004" width="600" height="838"/>
+        <image name="chevron.forward" catalog="system" width="97" height="128"/>
+        <image name="minus" catalog="system" width="128" height="26"/>
+        <image name="plus" catalog="system" width="128" height="113"/>
         <systemColor name="labelColor">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
@@ -520,6 +620,9 @@
         </systemColor>
         <systemColor name="systemPinkColor">
             <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
