@@ -196,7 +196,6 @@
                     <connections>
                         <outlet property="cardCollectionView" destination="b52-bx-kRD" id="upY-AI-PjV"/>
                         <outlet property="deckButton" destination="bcY-O5-QOR" id="is3-YP-a2P"/>
-                        <segue destination="nrp-Gt-QTM" kind="show" identifier="toCharacterCardViewController" id="tZT-OB-VVS"/>
                         <segue destination="IgG-ch-3Sd" kind="showDetail" identifier="toCardViewController" id="9Bc-5g-Y57"/>
                     </connections>
                 </viewController>
@@ -213,7 +212,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QcO-H1-chD">
-                                <rect key="frame" x="20" y="102" width="374" height="501"/>
+                                <rect key="frame" x="20" y="58" width="374" height="501"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="OP01-004" translatesAutoresizingMaskIntoConstraints="NO" id="2kg-R3-EW9">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="501"/>
@@ -278,7 +277,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SHk-1Q-5mu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1275" y="887"/>
+            <point key="canvasLocation" x="1070" y="903"/>
         </scene>
         <!--カード-->
         <scene sceneID="JOm-Kd-cHo">
@@ -289,7 +288,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VVq-fk-ozD">
-                                <rect key="frame" x="20" y="102" width="374" height="501"/>
+                                <rect key="frame" x="20" y="58" width="374" height="501"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="OP01-004" translatesAutoresizingMaskIntoConstraints="NO" id="BQ6-dr-6Ug">
                                         <rect key="frame" x="8" y="8" width="358" height="485"/>
@@ -355,7 +354,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RqG-c9-sEV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4194" y="887"/>
+            <point key="canvasLocation" x="1720" y="903"/>
         </scene>
         <!--デッキ-->
         <scene sceneID="N2I-r8-gA6">
@@ -420,7 +419,6 @@
                     <connections>
                         <outlet property="cardCollectionView" destination="bS7-Xi-Qto" id="Hf1-5f-KyZ"/>
                         <outlet property="doneButton" destination="OEe-PU-MK7" id="GgT-Q2-xRD"/>
-                        <segue destination="Qgc-7L-5ea" kind="show" identifier="toDeckCardViewController" id="kqt-IX-3MF"/>
                         <segue destination="IgG-ch-3Sd" kind="showDetail" identifier="toCardViewController" id="nEO-ON-fdf"/>
                     </connections>
                 </viewController>
@@ -557,6 +555,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jTm-OL-hZC" customClass="Button" customModule="onepMaker" customModuleProvider="target">
                                 <rect key="frame" x="318" y="685.5" width="76" height="76.5"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="jTm-OL-hZC" secondAttribute="height" multiplier="1:1" id="3i3-7H-pi0"/>
+                                </constraints>
                                 <color key="tintColor" systemColor="systemRedColor"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" image="minus" catalog="system"/>
