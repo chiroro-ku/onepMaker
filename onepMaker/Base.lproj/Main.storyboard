@@ -13,7 +13,7 @@
         <!--一覧-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="LeaderCardsViewController" customModule="onepMaker" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="LeaderCardListViewController" customModule="onepMaker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -100,7 +100,7 @@
                                     <action selector="buttonTapped:" destination="InO-4V-GXC" eventType="touchUpInside" id="nJ7-v1-uV2"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chevron.forward" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Ezh-z2-F0W">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chevron.right" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Ezh-z2-F0W">
                                 <rect key="frame" x="342.5" y="806" width="31.5" height="28"/>
                                 <color key="tintColor" systemColor="systemGrayColor"/>
                                 <constraints>
@@ -126,7 +126,7 @@
                     <navigationItem key="navigationItem" title="リーダー" id="bbD-0J-y2l"/>
                     <connections>
                         <outlet property="cardImageView" destination="v7h-9f-P6s" id="tgV-2k-eaS"/>
-                        <segue destination="RHg-e5-cpf" kind="show" identifier="toCharacterCardsViewController" id="tYL-zS-dkt"/>
+                        <segue destination="RHg-e5-cpf" kind="show" identifier="toCardListViewController" id="tYL-zS-dkt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ysg-2x-mEq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -136,7 +136,7 @@
         <!--一覧-->
         <scene sceneID="Y03-mh-rhu">
             <objects>
-                <viewController id="RHg-e5-cpf" customClass="CharacterCardsViewController" customModule="onepMaker" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="RHg-e5-cpf" customClass="CardListViewController" customModule="onepMaker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hSI-Zy-XVA">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -202,159 +202,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mDD-YP-Wam" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2435" y="-3"/>
-        </scene>
-        <!--カード-->
-        <scene sceneID="4cW-Di-27g">
-            <objects>
-                <viewController id="nrp-Gt-QTM" customClass="CharacterCardViewController" customModule="onepMaker" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="6vI-DB-6PY">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QcO-H1-chD">
-                                <rect key="frame" x="20" y="58" width="374" height="501"/>
-                                <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="OP01-004" translatesAutoresizingMaskIntoConstraints="NO" id="2kg-R3-EW9">
-                                        <rect key="frame" x="0.0" y="0.0" width="374" height="501"/>
-                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                    </imageView>
-                                </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="QcO-H1-chD" secondAttribute="height" multiplier="374:501" id="06N-WL-xu3"/>
-                                </constraints>
-                            </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="giY-Fs-ftz" customClass="Button" customModule="onepMaker" customModuleProvider="target">
-                                <rect key="frame" x="20" y="827" width="374" height="35"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <color key="tintColor" systemColor="systemPinkColor"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="デッキから削除"/>
-                                <connections>
-                                    <action selector="deleteCardButtonTapped:" destination="nrp-Gt-QTM" eventType="touchUpInside" id="YTz-rR-2Yh"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ewq-Pg-NLW" customClass="Button" customModule="onepMaker" customModuleProvider="target">
-                                <rect key="frame" x="20" y="784" width="374" height="35"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <color key="tintColor" systemColor="labelColor"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="デッキに追加"/>
-                                <connections>
-                                    <action selector="addCardButtonTapped:" destination="nrp-Gt-QTM" eventType="touchUpInside" id="q5t-6I-cZd"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tqx-Dz-iB9">
-                                <rect key="frame" x="373.5" y="791" width="10.5" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" systemColor="systemGrayColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="ong-hf-JXz"/>
-                        <color key="backgroundColor" systemColor="systemGray6Color"/>
-                        <constraints>
-                            <constraint firstItem="tqx-Dz-iB9" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="ong-hf-JXz" secondAttribute="leading" symbolic="YES" id="6lq-X9-jcg"/>
-                            <constraint firstItem="ong-hf-JXz" firstAttribute="bottom" secondItem="giY-Fs-ftz" secondAttribute="bottom" id="7Z2-gN-ytf"/>
-                            <constraint firstItem="ong-hf-JXz" firstAttribute="trailing" secondItem="giY-Fs-ftz" secondAttribute="trailing" constant="20" id="APP-9A-NEB"/>
-                            <constraint firstItem="ong-hf-JXz" firstAttribute="trailing" secondItem="ewq-Pg-NLW" secondAttribute="trailing" constant="20" id="ATE-vp-zpQ"/>
-                            <constraint firstItem="giY-Fs-ftz" firstAttribute="top" secondItem="ewq-Pg-NLW" secondAttribute="bottom" constant="8" symbolic="YES" id="EoQ-7L-pqX"/>
-                            <constraint firstItem="ewq-Pg-NLW" firstAttribute="leading" secondItem="ong-hf-JXz" secondAttribute="leading" constant="20" id="JBi-WD-mbP"/>
-                            <constraint firstItem="QcO-H1-chD" firstAttribute="leading" secondItem="ong-hf-JXz" secondAttribute="leading" constant="20" id="K0h-Hd-f6v"/>
-                            <constraint firstItem="tqx-Dz-iB9" firstAttribute="centerY" secondItem="ewq-Pg-NLW" secondAttribute="centerY" id="RW4-QK-5S3"/>
-                            <constraint firstItem="ong-hf-JXz" firstAttribute="trailing" secondItem="QcO-H1-chD" secondAttribute="trailing" constant="20" id="SWf-lr-2OZ"/>
-                            <constraint firstItem="QcO-H1-chD" firstAttribute="top" secondItem="ong-hf-JXz" secondAttribute="top" constant="10" id="VI2-4V-Gd3"/>
-                            <constraint firstItem="ewq-Pg-NLW" firstAttribute="trailing" secondItem="tqx-Dz-iB9" secondAttribute="trailing" constant="10" id="aD8-Xl-omy"/>
-                            <constraint firstItem="QcO-H1-chD" firstAttribute="centerX" secondItem="6vI-DB-6PY" secondAttribute="centerX" id="qCj-l9-4G0"/>
-                            <constraint firstItem="giY-Fs-ftz" firstAttribute="leading" secondItem="ong-hf-JXz" secondAttribute="leading" constant="20" id="v6w-7p-AEm"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" title="カード" id="Jou-dD-qIh"/>
-                    <connections>
-                        <outlet property="cardImageView" destination="2kg-R3-EW9" id="orF-NM-6af"/>
-                        <outlet property="numberLabel" destination="tqx-Dz-iB9" id="qgV-5t-Y8T"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="SHk-1Q-5mu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1070" y="903"/>
-        </scene>
-        <!--カード-->
-        <scene sceneID="JOm-Kd-cHo">
-            <objects>
-                <viewController id="Qgc-7L-5ea" customClass="DeckCardViewController" customModule="onepMaker" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Snm-mZ-df8">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VVq-fk-ozD">
-                                <rect key="frame" x="20" y="58" width="374" height="501"/>
-                                <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="OP01-004" translatesAutoresizingMaskIntoConstraints="NO" id="BQ6-dr-6Ug">
-                                        <rect key="frame" x="8" y="8" width="358" height="485"/>
-                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                    </imageView>
-                                </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="VVq-fk-ozD" secondAttribute="height" multiplier="374:501" id="sgy-rd-Q34"/>
-                                </constraints>
-                            </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lVv-iL-PYt" customClass="Button" customModule="onepMaker" customModuleProvider="target">
-                                <rect key="frame" x="20" y="827" width="374" height="35"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <color key="tintColor" systemColor="systemPinkColor"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="デッキから削除"/>
-                                <connections>
-                                    <action selector="deleteCardButtonTapped:" destination="nrp-Gt-QTM" eventType="touchUpInside" id="kFl-W8-Qvx"/>
-                                    <action selector="deleteDeckCardViewController:" destination="Qgc-7L-5ea" eventType="touchUpInside" id="XwY-YW-pP2"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v5X-ZS-miy" customClass="Button" customModule="onepMaker" customModuleProvider="target">
-                                <rect key="frame" x="20" y="784" width="374" height="35"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <color key="tintColor" systemColor="labelColor"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="デッキに追加"/>
-                                <connections>
-                                    <action selector="addCardButtonTapped:" destination="nrp-Gt-QTM" eventType="touchUpInside" id="r2x-Xx-bE9"/>
-                                    <action selector="addDeckCardViewController:" destination="Qgc-7L-5ea" eventType="touchUpInside" id="y88-vH-sh3"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wfH-S1-0KU">
-                                <rect key="frame" x="373.5" y="791" width="10.5" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" systemColor="systemGrayColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="Lfc-3x-ism"/>
-                        <color key="backgroundColor" systemColor="systemGray6Color"/>
-                        <constraints>
-                            <constraint firstItem="Lfc-3x-ism" firstAttribute="trailing" secondItem="lVv-iL-PYt" secondAttribute="trailing" constant="20" id="2ww-IG-ojc"/>
-                            <constraint firstItem="lVv-iL-PYt" firstAttribute="top" secondItem="v5X-ZS-miy" secondAttribute="bottom" constant="8" symbolic="YES" id="3TL-e2-8AZ"/>
-                            <constraint firstItem="wfH-S1-0KU" firstAttribute="centerY" secondItem="v5X-ZS-miy" secondAttribute="centerY" id="Km2-4G-fLd"/>
-                            <constraint firstItem="Lfc-3x-ism" firstAttribute="bottom" secondItem="lVv-iL-PYt" secondAttribute="bottom" id="N1A-XJ-BBw"/>
-                            <constraint firstItem="v5X-ZS-miy" firstAttribute="leading" secondItem="Lfc-3x-ism" secondAttribute="leading" constant="20" id="QJX-Ht-6TA"/>
-                            <constraint firstItem="VVq-fk-ozD" firstAttribute="top" secondItem="Lfc-3x-ism" secondAttribute="top" constant="10" id="Vu8-TV-7ov"/>
-                            <constraint firstItem="v5X-ZS-miy" firstAttribute="trailing" secondItem="wfH-S1-0KU" secondAttribute="trailing" constant="10" id="etY-Bz-U6s"/>
-                            <constraint firstItem="lVv-iL-PYt" firstAttribute="leading" secondItem="Lfc-3x-ism" secondAttribute="leading" constant="20" id="fwE-BI-nMD"/>
-                            <constraint firstItem="VVq-fk-ozD" firstAttribute="leading" secondItem="Lfc-3x-ism" secondAttribute="leading" constant="20" id="laR-Bu-Tsv"/>
-                            <constraint firstItem="Lfc-3x-ism" firstAttribute="trailing" secondItem="VVq-fk-ozD" secondAttribute="trailing" constant="20" id="p5I-5c-rGv"/>
-                            <constraint firstItem="Lfc-3x-ism" firstAttribute="trailing" secondItem="v5X-ZS-miy" secondAttribute="trailing" constant="20" id="sLs-Ow-xdf"/>
-                            <constraint firstItem="VVq-fk-ozD" firstAttribute="centerX" secondItem="Snm-mZ-df8" secondAttribute="centerX" id="snU-xv-qXV"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" title="カード" id="hba-eE-K1n"/>
-                    <connections>
-                        <outlet property="cardImageView" destination="BQ6-dr-6Ug" id="X61-p8-Ix6"/>
-                        <outlet property="numberLabel" destination="wfH-S1-0KU" id="tbO-5X-oe5"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="RqG-c9-sEV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1720" y="903"/>
         </scene>
         <!--デッキ-->
         <scene sceneID="N2I-r8-gA6">
@@ -538,7 +385,7 @@
                                 <rect key="frame" x="20" y="801" width="290" height="45"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="4枚をデッキに追加する"/>
+                                <buttonConfiguration key="configuration" style="plain" title="４枚を追加"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="udg-8f-aHf" customClass="Button" customModule="onepMaker" customModuleProvider="target">
                                 <rect key="frame" x="318" y="770" width="76" height="76"/>
@@ -565,6 +412,16 @@
                                     <action selector="deleteDeckCardButtonTapped:" destination="IgG-ch-3Sd" eventType="touchUpInside" id="4CE-n7-KDc"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xoa-NQ-e1O" customClass="Button" customModule="onepMaker" customModuleProvider="target">
+                                <rect key="frame" x="318" y="529" width="76" height="45"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Xoa-NQ-e1O" secondAttribute="height" multiplier="76:45" id="liE-uB-akz"/>
+                                </constraints>
+                                <color key="tintColor" systemColor="labelColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="0"/>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="bbM-05-s7z"/>
                         <color key="backgroundColor" systemColor="systemGray6Color"/>
@@ -574,6 +431,8 @@
                             <constraint firstItem="Yak-Zp-Dka" firstAttribute="width" secondItem="jf8-jR-qaz" secondAttribute="width" multiplier="0.7" id="3ih-5u-CbZ"/>
                             <constraint firstItem="udg-8f-aHf" firstAttribute="top" secondItem="jTm-OL-hZC" secondAttribute="bottom" constant="8" symbolic="YES" id="6Nc-t5-phi"/>
                             <constraint firstItem="sPE-cR-CKt" firstAttribute="leading" secondItem="bbM-05-s7z" secondAttribute="leading" constant="20" id="SmY-OF-Bbo"/>
+                            <constraint firstItem="bbM-05-s7z" firstAttribute="trailing" secondItem="Xoa-NQ-e1O" secondAttribute="trailing" constant="20" id="UR7-Hi-iGH"/>
+                            <constraint firstItem="Xoa-NQ-e1O" firstAttribute="top" secondItem="sPE-cR-CKt" secondAttribute="bottom" constant="8" symbolic="YES" id="Vgu-FQ-cEJ"/>
                             <constraint firstItem="sPE-cR-CKt" firstAttribute="top" secondItem="bbM-05-s7z" secondAttribute="top" constant="20" id="aKl-s2-NmU"/>
                             <constraint firstItem="udg-8f-aHf" firstAttribute="height" secondItem="Yak-Zp-Dka" secondAttribute="height" multiplier="1.7" id="dUL-r3-tDM"/>
                             <constraint firstItem="udg-8f-aHf" firstAttribute="height" secondItem="jTm-OL-hZC" secondAttribute="height" id="eew-4K-BTG"/>
@@ -583,16 +442,18 @@
                             <constraint firstItem="udg-8f-aHf" firstAttribute="width" secondItem="jTm-OL-hZC" secondAttribute="width" id="rRR-4V-GKR"/>
                             <constraint firstItem="udg-8f-aHf" firstAttribute="leading" secondItem="Yak-Zp-Dka" secondAttribute="trailing" constant="8" symbolic="YES" id="sRa-oh-XEu"/>
                             <constraint firstItem="Yak-Zp-Dka" firstAttribute="leading" secondItem="bbM-05-s7z" secondAttribute="leading" constant="20" id="vwI-mf-HRG"/>
+                            <constraint firstItem="jTm-OL-hZC" firstAttribute="width" secondItem="Xoa-NQ-e1O" secondAttribute="width" id="wQ8-7q-CS2"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="MUY-wE-cwH"/>
                     <connections>
                         <outlet property="cardImageView" destination="wCU-ai-dKb" id="XoW-bM-XV4"/>
+                        <outlet property="numberButton" destination="Xoa-NQ-e1O" id="eTx-oa-8j0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="37A-GT-S4j" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2757.971014492754" y="902.67857142857133"/>
+            <point key="canvasLocation" x="2833" y="903"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
@@ -601,7 +462,7 @@
     <resources>
         <image name="OP01-001" width="600" height="838"/>
         <image name="OP01-004" width="600" height="838"/>
-        <image name="chevron.forward" catalog="system" width="97" height="128"/>
+        <image name="chevron.right" catalog="system" width="97" height="128"/>
         <image name="minus" catalog="system" width="128" height="26"/>
         <image name="plus" catalog="system" width="128" height="113"/>
         <systemColor name="labelColor">
@@ -618,9 +479,6 @@
         </systemColor>
         <systemColor name="systemGrayColor">
             <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemPinkColor">
-            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemRedColor">
             <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

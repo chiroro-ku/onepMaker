@@ -1,60 +1,49 @@
 //
-//  CharacterCardListViewController.swift
+//  ViewController.swift
 //  onepMaker
 //
-//  Created by 小林千浩 on 2023/06/09.
+//  Created by 小林千浩 on 2023/06/07.
 //
 
 import UIKit
 import RealmSwift
 
-class CharacterCardsViewController: UIViewController {
-    
+class LeaderCardListViewController: UIViewController {
+
     @IBOutlet weak var cardCollectionView: UICollectionView!
-    @IBOutlet weak var deckButton: UIButton!
-    
+        
     var cardList: Results<Card>!
-    var leaderCard = Card()
     var selectedCard = Card()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        self.cardCollectionView.dataSource = self
-        self.cardCollectionView.delegate = self
+        cardCollectionView.dataSource = self
+        cardCollectionView.delegate = self
         
         let model = Model()
-        let color = self.leaderCard.color
-        self.cardList = model.deckCardAll(leaderColor: color)
-        
-        self.deckNumberLoad()
+        model.csvDataLoad()
+        cardList = model.leaderCardAll()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-        if segue.identifier == "toCardViewController" {
-            let characterCardViewController = segue.destination as? CardViewController
-            characterCardViewController?.card = self.selectedCard
+        if segue.identifier == "toLeadCardViewController"{
+            let leadCardViewController = segue.destination as? LeaderCardViewController
+            leadCardViewController?.leadCard = self.selectedCard
         }
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        self.deckNumberLoad()
-    }
     
-    func deckNumberLoad() {
-        
-        let model = Model()
-        let number = model.deckCardNumber()
-        
-        self.deckButton.setTitle( "デッキ(\(number))", for: .normal)
+    @IBAction func saveButton(_ sender: Any) {
     }
 }
 
-extension CharacterCardsViewController: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
+
+
+extension LeaderCardListViewController: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout{
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return self.cardList.count
+        self.cardList.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -80,6 +69,6 @@ extension CharacterCardsViewController: UICollectionViewDataSource, UICollection
         
         self.selectedCard = self.cardList[indexPath.row]
         
-        performSegue(withIdentifier: "toCardViewController", sender: nil)
+        performSegue(withIdentifier: "toLeadCardViewController", sender: nil)
     }
 }
