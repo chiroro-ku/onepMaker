@@ -8,7 +8,7 @@
 import UIKit
 import RealmSwift
 
-class DoneDeckViewController: UIViewController {
+class DeckEditViewController: UIViewController {
 
     @IBOutlet weak var cardCollectionView: UICollectionView!
     @IBOutlet weak var saveButton: UIButton!
@@ -33,7 +33,7 @@ class DoneDeckViewController: UIViewController {
     }
 }
 
-extension DoneDeckViewController: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
+extension DeckEditViewController: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return self.cardList.count
