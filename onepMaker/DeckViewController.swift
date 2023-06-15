@@ -50,14 +50,15 @@ class DeckViewController: UIViewController {
     }
     
     func cardListLoad(){
+        
         self.cardList = self.model.deckCardAll()
         self.cardCollectionView.reloadData()
+        
     }
     
     func deckNumberLoad(){
         
-        let model = Model()
-        let number = model.deckCardNumber()
+        let number = self.model.deckCardNumber()
         
         self.doneButton.setTitle("完成(\(number))", for: .normal)
         
@@ -66,6 +67,17 @@ class DeckViewController: UIViewController {
         }else{
             self.doneButton.isEnabled = false
         }
+        
+    }
+}
+
+
+
+extension DeckViewController: CardCollectionView {
+    func load() {
+        
+        self.cardListLoad()
+        self.deckNumberLoad()
         
     }
 }
@@ -102,17 +114,6 @@ extension DeckViewController: UICollectionViewDataSource, UICollectionViewDelega
         
         self.selectedCard = self.cardList[indexPath.row]
         performSegue(withIdentifier: "toCardViewController", sender: nil)
-        
-    }
-}
-
-
-
-extension DeckViewController: CardCollectionView {
-    func load() {
-        
-        self.cardListLoad()
-        self.deckNumberLoad()
         
     }
 }
