@@ -11,6 +11,8 @@ import RealmSwift
 class LeaderCardListViewController: UIViewController {
 
     @IBOutlet weak var cardCollectionView: UICollectionView!
+    
+    let model = Model()
         
     var cardList: Results<Card>!
     var selectedCard = Card()
@@ -20,9 +22,8 @@ class LeaderCardListViewController: UIViewController {
         cardCollectionView.dataSource = self
         cardCollectionView.delegate = self
         
-        let model = Model()
-        model.csvDataLoad()
-        cardList = model.leaderCardAll()
+        self.model.csvDataLoad()
+        cardList = model.getLeaderCardAll()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -31,10 +32,6 @@ class LeaderCardListViewController: UIViewController {
             let leadCardViewController = segue.destination as? LeaderCardViewController
             leadCardViewController?.leadCard = self.selectedCard
         }
-    }
-    
-    
-    @IBAction func saveButton(_ sender: Any) {
     }
 }
 
@@ -59,7 +56,7 @@ extension LeaderCardListViewController: UICollectionViewDataSource, UICollection
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
         let width = (self.cardCollectionView.bounds.width/4) - 1
-        let height = width * 1.34
+        let height = self.model.toHeight(width: width)
         let cellSize = CGSize(width: width, height: height)
         
         return cellSize

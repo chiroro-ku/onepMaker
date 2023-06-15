@@ -16,26 +16,46 @@ class CardViewController: UIViewController {
     
     var card = Card()
     
+    weak var delegate: CardCollectionView?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         let id = self.card.id
         self.cardImageView.image = UIImage(named: id)
+        
+        self.cardNumberLoad()
+        
     }
     
-    func numberLoad(){
+    override func viewWillDisappear(_ animated: Bool) {
+        
+        guard let delegate = self.delegate else {
+            return
+        }
+        delegate.load()
+        
+    }
+    
+    func cardNumberLoad(){
+        
         let id = self.card.id
         let number = self.model.deckCardNumber(id: id)
         self.numberButton.setTitle("\(number)", for: .normal)
+        
     }
     
     @IBAction func deleteDeckCardButtonTapped(_ sender: Any) {
+        
         self.model.deleteDeckCard(card: self.card)
-        self.numberLoad()
+        self.cardNumberLoad()
+        
     }
     
     @IBAction func addDeckCardButtonTapped(_ sender: Any) {
+        
         self.model.addDeckCard(card: self.card)
-        self.numberLoad()
+        self.cardNumberLoad()
+        
     }
 }

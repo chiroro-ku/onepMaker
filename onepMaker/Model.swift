@@ -10,9 +10,19 @@ import RealmSwift
 
 class Model{
     
+    let onepCardWidth: CGFloat = 63
+    let onepCardHeght: CGFloat = 88
     let fileName = "CardList"
     
     var data = [String]()
+    
+    func toWidth(height: CGFloat) -> CGFloat {
+        return height * self.onepCardWidth / self.onepCardHeght
+    }
+    
+    func toHeight(width: CGFloat) -> CGFloat {
+        return width * self.onepCardHeght / self.onepCardWidth
+    }
     
     func deleteAll(){
         let realm = try! Realm()
@@ -21,7 +31,7 @@ class Model{
         }
     }
     
-    func leaderCardAll() -> Results<Card>{
+    func getLeaderCardAll() -> Results<Card>{
         let realm = try! Realm()
         let result = realm.objects(Card.self).filter("info == 'LEADER'")
         return result
@@ -108,7 +118,7 @@ class Model{
     
     func csvDataLoad(){
         
-        let count = self.leaderCardAll().count
+        let count = self.getLeaderCardAll().count
         if count != 0 {
             return
         }

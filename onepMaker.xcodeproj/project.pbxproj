@@ -26,6 +26,7 @@
 		F66ACD0D2A350A130038184A /* CardList.json in Resources */ = {isa = PBXBuildFile; fileRef = F66ACD0C2A350A130038184A /* CardList.json */; };
 		F66ACD0F2A3641EB0038184A /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = F66ACD0E2A3641EB0038184A /* Card.swift */; };
 		F6ECE09E2A3A24A10041CD38 /* CardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6ECE09D2A3A24A10041CD38 /* CardViewController.swift */; };
+		F6ECE0A02A3B87EF0041CD38 /* CardCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6ECE09F2A3B87EF0041CD38 /* CardCollectionView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +53,7 @@
 		F66ACD0C2A350A130038184A /* CardList.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = CardList.json; sourceTree = "<group>"; };
 		F66ACD0E2A3641EB0038184A /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		F6ECE09D2A3A24A10041CD38 /* CardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewController.swift; sourceTree = "<group>"; };
+		F6ECE09F2A3B87EF0041CD38 /* CardCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCollectionView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +125,7 @@
 				F66ACD0A2A3507900038184A /* Model.swift */,
 				F66ACD0E2A3641EB0038184A /* Card.swift */,
 				F665E86B2A382ED100651428 /* DeckCard.swift */,
+				F6ECE09F2A3B87EF0041CD38 /* CardCollectionView.swift */,
 			);
 			path = onepMaker;
 			sourceTree = "<group>";
@@ -252,6 +255,7 @@
 				F6527D472A31E52A003966AD /* LeaderCardViewController.swift in Sources */,
 				F66ACD0B2A3507900038184A /* Model.swift in Sources */,
 				F6ECE09E2A3A24A10041CD38 /* CardViewController.swift in Sources */,
+				F6ECE0A02A3B87EF0041CD38 /* CardCollectionView.swift in Sources */,
 				F66ACD072A339DD90038184A /* ViewController.swift in Sources */,
 				F64D71992A3057BA000DA808 /* SceneDelegate.swift in Sources */,
 				F66ACD092A3486470038184A /* DeckViewController.swift in Sources */,

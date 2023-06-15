@@ -196,7 +196,7 @@
                     <connections>
                         <outlet property="cardCollectionView" destination="b52-bx-kRD" id="upY-AI-PjV"/>
                         <outlet property="deckButton" destination="bcY-O5-QOR" id="is3-YP-a2P"/>
-                        <segue destination="IgG-ch-3Sd" kind="showDetail" identifier="toCardViewController" id="9Bc-5g-Y57"/>
+                        <segue destination="IgG-ch-3Sd" kind="presentation" identifier="toCardViewController" id="9Bc-5g-Y57"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mDD-YP-Wam" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -266,7 +266,7 @@
                     <connections>
                         <outlet property="cardCollectionView" destination="bS7-Xi-Qto" id="Hf1-5f-KyZ"/>
                         <outlet property="doneButton" destination="OEe-PU-MK7" id="GgT-Q2-xRD"/>
-                        <segue destination="IgG-ch-3Sd" kind="showDetail" identifier="toCardViewController" id="nEO-ON-fdf"/>
+                        <segue destination="IgG-ch-3Sd" kind="presentation" identifier="toCardViewController" id="nEO-ON-fdf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bAf-0m-5Nq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -453,7 +453,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="37A-GT-S4j" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2833" y="903"/>
+            <point key="canvasLocation" x="2807" y="727"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
