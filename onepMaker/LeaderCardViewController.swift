@@ -11,6 +11,8 @@ class LeaderCardViewController: UIViewController {
 
     @IBOutlet weak var cardImageView: UIImageView!
     
+    let model = Model()
+    
     var leadCard = Card()
     
     override func viewDidLoad() {
@@ -21,19 +23,18 @@ class LeaderCardViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "toCharacterCardsViewController" {
+        if segue.identifier == "toCardListViewController" {
             
-            let characterCardsViewController = segue.destination as! CharacterCardsViewController
+            let characterCardsViewController = segue.destination as! CardListViewController
             characterCardsViewController.leaderCard = self.leadCard
             
-            let model = Model()
-            model.deleteDeckCardAll()
-            model.addDeckCard(card: leadCard)
+            self.model.deleteDeckCardAll()
+            self.model.addDeckCard(card: leadCard)
             
         }
     }
     
     @IBAction func buttonTapped(_ sender: Any) {
-        performSegue(withIdentifier: "toCharacterCardsViewController", sender: nil)
+        performSegue(withIdentifier: "toCardListViewController", sender: nil)
     }
 }

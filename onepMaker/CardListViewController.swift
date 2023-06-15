@@ -8,10 +8,12 @@
 import UIKit
 import RealmSwift
 
-class CharacterCardsViewController: UIViewController {
+class CardListViewController: UIViewController {
     
     @IBOutlet weak var cardCollectionView: UICollectionView!
     @IBOutlet weak var deckButton: UIButton!
+    
+    let model = Model()
     
     var cardList: Results<Card>!
     var leaderCard = Card()
@@ -23,35 +25,55 @@ class CharacterCardsViewController: UIViewController {
         self.cardCollectionView.dataSource = self
         self.cardCollectionView.delegate = self
         
-        let model = Model()
-        let color = self.leaderCard.color
-        self.cardList = model.deckCardAll(leaderColor: color)
-        
-        self.deckNumberLoad()
+        self.load()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-        if segue.identifier == "toCharacterCardViewController" {
-            let characterCardViewController = segue.destination as? CharacterCardViewController
-            characterCardViewController?.characterCard = self.selectedCard
+        if segue.identifier == "toCardViewController" {
+            guard let characterCardViewController = segue.destination as? CardViewController else {
+                return
+            }
+            characterCardViewController.card = self.selectedCard
+            characterCardViewController.delegate = self
         }
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        self.deckNumberLoad()
+        self.load()
+    }
+    
+    func cardListLoad() {
+        
+        let color = self.leaderCard.color
+        self.cardList = self.model.deckCardAll(leaderColor: color)
+        self.cardCollectionView.reloadData()
+        
     }
     
     func deckNumberLoad() {
         
-        let model = Model()
-        let number = model.deckCardNumber()
-        
+        let number = self.model.deckCardNumber()
         self.deckButton.setTitle( "デッキ(\(number))", for: .normal)
+        
     }
 }
 
-extension CharacterCardsViewController: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
+
+
+extension CardListViewController: CardCollectionView {
+    func load() {
+        
+        self.cardListLoad()
+        self.deckNumberLoad()
+        
+    }
+}
+
+
+
+extension CardListViewController: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return self.cardList.count
@@ -70,7 +92,7 @@ extension CharacterCardsViewController: UICollectionViewDataSource, UICollection
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
         let width = (self.cardCollectionView.bounds.width/4) - 1
-        let height = width * 1.34
+        let height = self.model.toHeight(width: width)
         let cellSize = CGSize(width: width, height: height)
         
         return cellSize
@@ -79,7 +101,7 @@ extension CharacterCardsViewController: UICollectionViewDataSource, UICollection
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath){
         
         self.selectedCard = self.cardList[indexPath.row]
+        performSegue(withIdentifier: "toCardViewController", sender: nil)
         
-        performSegue(withIdentifier: "toCharacterCardViewController", sender: nil)
     }
 }
